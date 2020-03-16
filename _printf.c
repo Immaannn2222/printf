@@ -25,10 +25,10 @@ lenth++;
 if (format[i] != '%')
 _putchar(format[i]);
 
-if (format[i] == '%')
+else
 {
-  lenth += get_spec_char(format[i + 1], args) - 1;
-  i = i + 1;
+lenth += get_spec_char(format[i + 1], args) - 1;
+i = i + 1;
 }
 i++;
 
