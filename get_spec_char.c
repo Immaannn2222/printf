@@ -16,7 +16,7 @@ spec_t spec[] = {
 {'d', print_integer},
 {'b', print_bin},
 {'u', print_unsig_int},
-{'o', print_oct},
+/*{'o', print_oct},*/
 {'r', rev_string},
 {'0', NULL}
 };

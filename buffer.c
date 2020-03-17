@@ -10,7 +10,8 @@
 */
 char *_buffer(char *s, char b, unsigned int n)
 {
-unsigned int i = BUFFER_size;
+unsigned int i;
+n = BUFFER_SIZE;
 while (i < n)
 {
 s[i] = b;
