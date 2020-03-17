@@ -14,6 +14,7 @@ spec_t spec[] = {
 {'%', print_percent},
 {'i', print_integer},
 {'d', print_d},
+{'b', print_bin},
 {'0', NULL}
 };
 

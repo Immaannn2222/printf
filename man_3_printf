@@ -1,0 +1,20 @@
+
+.TH printf 3 "16 Mars 2020" "holberton man page"
+.SH NAME
+.B printf
+
+.SH SYNOPSIS
+.BI "#include"""holberton.h"
+.br
+.BI "int _printf(const"\b "char"\b"*format,"\b"...");
+.SH DESCRIPTION
+the functions in the printf() family produce output according to a format as described below.
+.SH OPTIONS
+.B holberton
+does not take any option. However, you can supply studentname.
+.SH SEE ALSO
+.I peerlearning(2), projectbased(2), fullstack(2), Betty(1)
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Khawla jlassi, Imen ayari
