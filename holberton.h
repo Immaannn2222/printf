@@ -22,6 +22,7 @@ int print_bin(va_list args);
 
 int _putchar(char c);
 int _printf(const char *format, ...);
+char *_buffer(char *s, char b, unsigned int n);
 
 
 
