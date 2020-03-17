@@ -8,16 +8,11 @@
  */
 int print_unsig_int(va_list args)
 {
-int i, a[10], x = 0;
-unsigned int j = 0;
+int i, x = 0;
+unsigned int j = 0, a[11];
 unsigned int n = va_arg(args, int);
 j = n;
-if (n <= 1)
-{
-j = -n;
-_putchar('-');
-x = 1;
-}
+
 if (n != 0)
 {
 for (i = 0; j > 0; i++)
@@ -28,8 +23,8 @@ j = j / 10;
 x += i;
 while (i > 0)
 {
-_putchar(a[i - 1] + '0');
-i--;
+_putchar(a[--i] + '0');
+
 }
 }
 else
