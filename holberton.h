@@ -25,6 +25,7 @@ int print_oct(va_list o);
 int _putchar(char c);
 int _printf(const char *format, ...);
 char *_buffer(char *s, char b, unsigned int n);
+void rev_string(va_list args);
 
 
 
