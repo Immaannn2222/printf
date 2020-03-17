@@ -21,6 +21,8 @@ return (-1);
 while (format[i] != '\0' && format)
 {
 ++lenth;
+if (format[i] == ' ')
+break;
 if (format[i] != '%')
 _putchar(format[i]);
 else
