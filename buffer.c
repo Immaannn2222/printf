@@ -1,16 +1,21 @@
 #include "holberton.h"
 #include <unistd.h>
-
+#define BUFFER_SIZE 1024
 /**
- * _buffer - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _buffer(char c)
+*_buffer - fill n bytes with character
+*@b : parameter designing a character
+*@s: pointer
+*@n : a long integer
+*Return:s
+*/
+char *_buffer(char *s, char b, unsigned int n)
 {
-int size;
-size = '1024';
-return (write(1, &c, size));
+unsigned int i = BUFFER_size;
+while (i < n)
+{
+s[i] = b;
+i++;
 }
+return (s);
+}
+
