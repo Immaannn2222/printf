@@ -9,20 +9,16 @@
 int rev_string(va_list args)
 {
 char *s;
-int i = 0, lenn = 0;
+int i = 0, j, lenn = 0;
 s = va_arg(args, char*);
-if (s == NULL)
-{
-return (-1);
-}
 while (s[i] != '\0')
 {
 i++;
 }
-i--;
-for (; i >= 0; i++)
+i = i - 1;
+for (j = 0; j <= i; j++)
 {
-_putchar(s[i]);
+_putchar(s[i - j]);
 lenn++;
 }
 return (lenn);
