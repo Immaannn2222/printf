@@ -24,7 +24,7 @@ int print_string(va_list args)
 char *s = va_arg(args, char *);
 int i = 0;
 if (s == NULL)
-s = "nil";
+s = "(nil)";
 while (s[i] != '\0')
 {
 _putchar(s[i]);
@@ -106,5 +106,5 @@ i--;
 }
 else
 _putchar('0');
-return (x);
+return (x + 1);
 }
