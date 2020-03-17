@@ -4,9 +4,21 @@
 .B printf
 
 .SH SYNOPSIS
-.BI "#include"""holberton.h"
+.B #include "holberton.h"
 .br
-.BI "int _printf(const"\b "char"\b"*format,"\b"...");
+.B int _printf(const char*format,...);
+.br
+.B int get_spec_char(char c, va_list p);
+.br
+.B int print_char(va_list args);
+.br
+.B int print_string(va_list args);
+.br
+.B int print_percent(va_list __attribute__((unused)) args);
+.br
+.B int prin_integer(va_list args);
+.br
+.B int print_bin(va_list args); 
 .SH DESCRIPTION
 the functions in the printf() family produce output according to a format as described below.
 .SH OPTIONS
