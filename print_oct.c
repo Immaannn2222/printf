@@ -15,12 +15,7 @@ int print_oct(va_list args)
 	int i = 0, oct = 0;
 
 	n = va_arg(args, int);
-if (n <= 1)
-{
-_putchar('-');
-n = -n;
-x += 1;
-	}
+
 if (n == 0)
 {
 _putchar('0');
@@ -28,7 +23,7 @@ x = 1;
 }
 else
 {
-while (n >= 0)
+while (n >= 1)
 {
 		oct = n % 8;
 		octal[i++] = (oct + '0');
@@ -37,7 +32,7 @@ while (n >= 0)
 }
 
 }
-while (i >= 0)
+while (i > 0)
 {
 
 _putchar(octal[--i]);
