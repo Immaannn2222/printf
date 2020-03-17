@@ -37,14 +37,13 @@ while (format[i + 1] == ' ')
 i++;
 }
 
-{
 lenth += get_spec_char(format[i + 1], args) - 1;
 i = i + 1;
-}
+
 }
 i++;
 }
-
+free (space)
 va_end(args);
 return (lenth);
 }
