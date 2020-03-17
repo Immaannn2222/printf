@@ -3,8 +3,8 @@
 #include <stdarg.h>
 /**
  *rot13 - function that encodes a string using rot13.
- *@s: char
- *Return: s
+ *@args: char
+ *Return: x
  */
 int rot13(va_list args)
 {
