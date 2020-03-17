@@ -44,7 +44,7 @@ _putchar('%');
 return (1);
 }
 /**
-  *print_d - a fun taht prints an integer
+  *print_integer - a fun taht prints an integer
   *@args: its arguments
   *
   *Return: x
