@@ -15,6 +15,8 @@ spec_t spec[] = {
 {'i', print_integer},
 {'d', print_integer},
 {'b', print_bin},
+{'u', print_unsig_int},
+{'o', print_oct},
 {'0', NULL}
 };
 
