@@ -33,8 +33,6 @@ i = i + 1;
 i++;
 
 }
-_putchar('\n');
 va_end(args);
-
 return (lenth);
 }
