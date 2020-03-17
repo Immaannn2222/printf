@@ -20,7 +20,7 @@ if (format == NULL)
 return (-1);
 while (format[i] != '\0' && format)
 {
-lenth++;
+++lenth;
 if (format[i] != '%')
 _putchar(format[i]);
 else

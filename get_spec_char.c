@@ -13,7 +13,7 @@ spec_t spec[] = {
 {'s', print_string},
 {'%', print_percent},
 {'i', print_integer},
-{'d', print_d},
+{'d', print_integer},
 {'b', print_bin},
 {'0', NULL}
 };
