@@ -17,7 +17,7 @@ unsigned int i = 0;
 int lenth = 0;
 
 
-if (format == NULL || args == NULL)
+if (format == NULL || args == NULL || (format[0] == '%' && !format[1]))
 return (-1);
 
 va_start(args, format);
