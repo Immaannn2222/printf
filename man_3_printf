@@ -23,7 +23,7 @@
 .br
 .B int prin_integer(va_list args);
 .br
-.B int print_bin(va_list args); 
+.B int print_bin(va_list args);
 .br
 .B int print_unsig_int(va_list args);
 
@@ -51,7 +51,7 @@ present; if the precision is not specified, or is greater than
 the size of the array, the array must contain a terminating
 null byte.
 
-.BR "c" 
+.BR "c"
 
 If no l modifier is present, the int argument is converted to
 an unsigned char, and the resulting character is written.  If
@@ -60,7 +60,7 @@ is converted to a multibyte sequence by a call to the
 wcrtomb(3) function, with a conversion state starting in the
 initial state, and the resulting multibyte string is written.
 
-.BR  "%" 
+.BR  "%"
 
 A '%' is written.  No argument is converted.  The complete
 conversion specification is '%%'.
