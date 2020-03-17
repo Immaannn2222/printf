@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <stdarg.h>
 /**
- * print_pointer - print pointer 
- * @args: argument.
+ * print_unsig_int - print pointer
+ * @args: argument
  * Return: lenth.
  */
 int print_unsig_int(va_list args)
