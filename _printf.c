@@ -15,15 +15,13 @@ int _printf(const char *format, ...)
 va_list args;
 unsigned int i = 0;
 int lenth = 0;
-char *space;
+
 
 if (format == NULL || args == NULL)
 return (-1);
 
 va_start(args, format);
-space = malloc(1024);
-if (space == NULL)
-return (-1);
+
 while (format[i] != '\0' && format)
 {
 ++lenth;
@@ -43,7 +41,7 @@ i = i + 1;
 }
 i++;
 }
-free (space)
+
 va_end(args);
 return (lenth);
 }
