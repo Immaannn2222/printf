@@ -20,7 +20,7 @@ int print_percent(va_list __attribute__((unused)) args);
 int print_integer(va_list args);
 int print_bin(va_list args);
 int print_unsig_int(va_list args);
-int print_oct(va_list o);
+int print_oct(va_list args);
 
 int _putchar(char c);
 int _printf(const char *format, ...);
