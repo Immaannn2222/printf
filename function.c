@@ -44,36 +44,6 @@ _putchar('%');
 return (1);
 }
 /**
-  *print_integer - a fun taht prints an unsigned integer
-  *@args: its arguments
-  *
-  *Return: x
-  */
-int print_integer(va_list args)
-{
-int i, a[10], x = 0;
-unsigned int j = 0;
-int n = va_arg(args, int);
-j = n;
-if (n != 0)
-{
-for (i = 0; j > 0; i++)
-{
-a[i] = j % 10;
-j = j / 10;
-}
-x = i;
-while (i > 0)
-{
-_putchar(a[i - 1] + '0');
-i--;
-}
-}
-else
-_putchar('0');
-return (x);
-}
-/**
   *print_d - a fun taht prints an integer
   *@args: its arguments
   *
