@@ -18,6 +18,7 @@ spec_t spec[] = {
 {'u', print_unsig_int},
 {'o', print_oct},
 {'R', rot13},
+{'r', rev_string},
 {'0', NULL}
 };
 
@@ -25,8 +26,6 @@ int i = 0;
 int len = 0;
 while (spec[i].x != '0')
 {
-
-
 if (spec[i].x == c)
 {
 len += spec[i].func(p);
