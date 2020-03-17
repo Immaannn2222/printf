@@ -2,14 +2,13 @@
 
 /**
 *rev_string - prints a string in reverse
-*@s : parameter character
-*Return:
+*@args: parameter
+*Return: i
 */
 
-void rev_string(va_list args)
+int rev_string(va_list args)
 {
-char *s;
-*s = va_args (args, int);
+char *s = va_arg(args, char*);
 int i = 0, j = 0, x = 0;
 char c;
 while (s[i] != '\0')
@@ -24,4 +23,5 @@ c = s[j];
 s[j] = s[i - 1 - j];
 s[i - 1 - j] = c;
 }
+return (i);
 }
