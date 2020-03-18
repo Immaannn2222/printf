@@ -1,6 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdarg.h>
+#define FIND (n >= 1)
 /**
   *print_oct - convert number to octal
   *@args: argument
@@ -23,7 +24,7 @@ x = 1;
 }
 else
 {
-while (n >= 1)
+while (FIND)
 {
 		oct = n % 8;
 		octal[i++] = (oct + '0');
