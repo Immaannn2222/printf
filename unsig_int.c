@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 /**
- * print_pointer - print pointer 
+ * print_unsig_int - prints an unsigned int
  * @args: argument.
  * Return: lenth.
  */
