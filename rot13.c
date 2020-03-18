@@ -3,31 +3,37 @@
 #include <stdarg.h>
 /**
  *rot13 - function that encodes a string using rot13.
- *@s: char
- *Return: s
+ *@args: char
+ *Return: x
  */
 int rot13(va_list args)
 {
-int i = 0, j = 0, x = 0;
+int i = 0, j = 0, lenth = 0;
 char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 char rot[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 char *str = va_arg(args, char *);
-for (i = 0; str[i] != '\0'; i++)
-{
-for (j = 0; a[j] != '\0'; j++)
-{
-if (str[i] == a[j])
-{
-str[i] = rot[j];
-break;
-}
-}
-}
-x = i;
+
+if (str == NULL)
+str = "NULL";
 while (str[i] != '\0')
 {
-_putchar(str[i--]);
+i++;
+if ((a[j] != '\0') && (str[i] != a[j]))
+{
+j++;
+}
+if (str[i] == a[j])
+		{
+_putchar(rot[j]);
+lenth++;
+break;
+		}
+else
+		{
+			_putchar(str[i]);
+			lenth++;
+		}
+	}
+	return (lenth);
 }
 
-return (x);
-}
