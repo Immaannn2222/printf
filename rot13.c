@@ -13,16 +13,18 @@ char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 char rot[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 char *str = va_arg(args, char *);
 
+if (str == NULL)
+str = "(none)";
 for (i = 0; str[i] != '\0'; i++)
 {
 while ((a[j] != '\0') && (str[i] != a[j]))
-		{
-			j++;
-		}
+j++;
+
 		if (str[i] == a[j])
 		{
-			_putchar(rot[j]);
-			lenth++;
+_putchar(rot[j]);
+lenth++;
+break;
 		}
 		else if (a[j] == '\0')
 		{
