@@ -8,26 +8,27 @@
  */
 int rot13(va_list args)
 {
-int i = 0, j = 0, x = 0;
+int i = 0, j = 0, lenth = 0;
 char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 char rot[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 char *str = va_arg(args, char *);
+
 for (i = 0; str[i] != '\0'; i++)
 {
-for (j = 0; a[j] != '\0'; j++)
-{
-if (str[i] == a[j])
-{
-str[i] = rot[j];
-break;
-}
-}
-}
-x = i;
-while (str[i] != '\0')
-{
-_putchar(str[--i]);
-}
-
-return (x);
+while ((a[j] != '\0') && (str[i] != a[j]))
+		{
+			j++;
+		}
+		if (str[i] == a[j])
+		{
+			_putchar(rot[j]);
+			lenth++;
+		}
+		else if (a[j] == '\0')
+		{
+			_putchar(str[i]);
+			lenth++;
+		}
+	}
+	return (lenth);
 }
