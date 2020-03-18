@@ -38,8 +38,8 @@ continue;
 if (format[i] == '%')
 {
 i++;
-for (; format[i] == ' '; i++)
-;
+for (format[i] == '+' || format[i] == ' ' || format[i] == '#')
+i++;
 if (format[i] == '\0')
 return (lenth);
 else
