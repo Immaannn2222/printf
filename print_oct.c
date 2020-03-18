@@ -28,8 +28,6 @@ x = 1;
 }
 else
 {
-while (n >= 0)
-{
 		oct = n % 8;
 		octal[i++] = (oct + '0');
 		n = n / 8;
