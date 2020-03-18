@@ -3,43 +3,58 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#define putchar1 {_putchar(format[i]);\
+lenth++;\
+i++;\
+}
+#define print10 {_putchar('%');\
+_putchar(format[i]);\
+lenth += 2;\
+i++;\
+}
+
 /**
   *_printf - function that print anything
   *@format: is a character string.
-  *
   *Return: the number of characters printed
   */
 
 int _printf(const char *format, ...)
 {
-va_list args;
-unsigned int i = 0;
-int lenth = 0;
-
-
-if (format == NULL || args == NULL || (format[0] == '%' && !format[1]))
+int i = 0, lenth = 0;
+va_list arg;
+int (*print)(va_list);
+va_start(arg, format);
+if (format == NULL)
 return (-1);
-
-va_start(args, format);
-
-while (format[i] != '\0' && format)
+while (format[i] != '\0')
 {
-++lenth;
-
-if (format[i] != '%')
-_putchar(format[i]);
+while (format[i] != '%' && format[i] != '\0')
+{
+putchar1
+}
+if (format[i] == '%' && format[i + 1] == '\0')
+continue;
+if (format[i] == '%')
+{
+i++;
+for (; format[i] == ' '; i++)
+;
+if (format[i] == '\0')
+return (lenth);
 else
 {
-while (format[i + 1] == ' ' || format[i + 1] == '+' || format[i + 1] == '#')
+print = get_spec_char(&format[i]);
+if (print == NULL)
+print10
+else
 {
+lenth += print(arg);
 i++;
 }
-lenth += get_spec_char(format[i + 1], args) - 1;
-i = i + 1;
 }
-i++;
 }
-
-va_end(args);
+}
+va_end(arg);
 return (lenth);
 }

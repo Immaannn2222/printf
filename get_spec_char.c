@@ -3,36 +3,35 @@
   *get_spec_char - checks the characters
   *@c: a charcter
   *@p: the list
-  *Return: 1 or -1
+  *Return: 1enth or -1
   */
 
-int get_spec_char(char c, va_list p)
+int (*get_spec_char(const char *format))(va_list args)
 {
 spec_t spec[] = {
-{'c', print_char},
-{'s', print_string},
-{'%', print_percent},
-{'i', print_integer},
-{'d', print_integer},
-{'b', print_bin},
-{'u', print_unsig_int},
-{'o', print_oct},
-{'R', rot13},
-{'r', rev_string},
-{'0', NULL}
+{"c", print_char},
+{"s", print_string},
+{"%", print_percent},
+{"i", print_integer},
+{"d", print_integer},
+{"b", print_bin},
+{"u", print_unsig_int},
+{"o", print_oct},
+{"R", rot13},
+{NULL, NULL}
 };
 
 int i = 0;
-int len = 0;
-while (spec[i].x != '0')
+while (spec[i].x != NULL)
 {
-if (spec[i].x == c)
+
+
+if (*(spec[i].x) == *format)
 {
-len += spec[i].func(p);
-return (len);
+
+return (spec[i].func);
 }
 i++;
 }
-return (-1);
+return (spec[i].func);
 }
-

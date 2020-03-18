@@ -9,11 +9,11 @@
   */
 typedef struct specifiers
 {
-char x;
+char *x;
 int (*func)(va_list args);
 } spec_t;
 
-int get_spec_char(char c, va_list p);
+int (*get_spec_char(const char *format))(va_list args);
 int print_char(va_list args);
 int print_string(va_list args);
 int print_percent(va_list __attribute__((unused)) args);
@@ -25,8 +25,6 @@ int rot13(va_list args);
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-char *_buffer(char *s, char b, unsigned int n);
-int rev_string(va_list args);
 
 
 
