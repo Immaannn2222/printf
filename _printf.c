@@ -30,14 +30,12 @@ if (format[i] != '%')
 _putchar(format[i]);
 else
 {
-while (format[i + 1] == ' ')
+while (format[i + 1] == ' ' || format[i + 1] == '+' || format[i + 1] == '#')
 {
 i++;
 }
-
 lenth += get_spec_char(format[i + 1], args) - 1;
 i = i + 1;
-
 }
 i++;
 }
