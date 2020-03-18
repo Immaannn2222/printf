@@ -29,5 +29,4 @@ char *_buffer(char *s, char b, unsigned int n);
 int rev_string(va_list args);
 
 
-
 #endif
