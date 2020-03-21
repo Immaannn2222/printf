@@ -11,26 +11,32 @@ int rot13(va_list args)
 int i = 0, j = 0, lenth = 0;
 char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 char rot[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
-char *str = va_arg(args, char *);
-
+char *str;
+str = malloc(sizeof(1024));
 if (str == NULL)
-str = "(none)";
+return (0);
+str = va_arg(args, char *);
+if (str == NULL)
+str = "(ahyy)";
 for (i = 0; str[i] != '\0'; i++)
 {
-while ((a[j] != '\0') && (str[i] != a[j]))
-j++;
+while (a[j] != '\0')
+{
 
-		if (str[i] == a[j])
+		if (a[j] == str[i])
 		{
 _putchar(rot[j]);
 lenth++;
 break;
 		}
-		else if (a[j] == '\0')
-		{
-			_putchar(str[i]);
-			lenth++;
-		}
+		j++;
 	}
+	if (j >= 52)
+	{
+		_putchar(str[i]);
+	}
+
+	j = 0;
+}
 	return (lenth);
 }
