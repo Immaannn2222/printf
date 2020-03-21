@@ -2,6 +2,7 @@
 #define PRINTF_H
 #include <stdarg.h>
 #include <stddef.h>
+#include <stdlib.h>
 /**
   *struct specifiers - struct to get spec char
   *@x: a charcter

@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdarg.h>
-#define FIND (n >= 1)
+
 /**
   *print_oct - convert number to octal
   *@args: argument
@@ -12,32 +12,28 @@
 int print_oct(va_list args)
 {
 	char octal[11];
-	unsigned int x = 0, n = 0;
+	unsigned int x = 0, num = 0;
 	int i = 0, oct = 0;
 
-	n = va_arg(args, int);
+	num = va_arg(args, int);
 
-if (n == 0)
+if (num == 0)
 {
 _putchar('0');
-x = 1;
+x += 1;
 }
 else
+while (num != 0)
 {
-while (FIND)
-{
-		oct = n % 8;
+		oct = num % 8;
 		octal[i++] = (oct + '0');
-		n = n / 8;
+		num = num / 8;
 		x++;
 }
 
-}
 while (i > 0)
 {
-
-_putchar(octal[--i]);
-
+_putchar(octal[i--]);
 }
 
 return (x);

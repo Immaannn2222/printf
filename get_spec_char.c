@@ -1,8 +1,7 @@
 #include "holberton.h"
 /**
   *get_spec_char - checks the characters
-  *@c: a charcter
-  *@p: the list
+  *@format: a string refers to a control parameter used
   *Return: 1enth or -1
   */
 

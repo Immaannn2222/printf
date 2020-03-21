@@ -8,7 +8,7 @@
  */
 int rot13(va_list args)
 {
-int i = 0, j = 0, lenth = 0;
+unsigned int i = 0, j = 0;
 char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 char rot[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 char *str;
@@ -26,7 +26,7 @@ while (a[j] != '\0')
 		if (a[j] == str[i])
 		{
 _putchar(rot[j]);
-lenth++;
+
 break;
 		}
 		j++;
@@ -38,5 +38,5 @@ break;
 
 	j = 0;
 }
-	return (lenth);
+	return (i);
 }
