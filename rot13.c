@@ -12,9 +12,7 @@ unsigned int i = 0, j = 0;
 char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 char rot[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 char *str;
-str = malloc(sizeof(1024));
-if (str == NULL)
-return (0);
+
 str = va_arg(args, char *);
 if (str == NULL)
 str = "(ahyy)";
